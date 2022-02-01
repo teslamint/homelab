@@ -4,10 +4,10 @@ elementweb:
     className: nginx
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
-      external-dns.alpha.kubernetes.io/target: "homelab-tunnel.khuedoan.com"
+      external-dns.alpha.kubernetes.io/target: "homelab-tunnel.tmint.dev"
       external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
     hosts:
-      - host: &host chat.khuedoan.com
+      - host: &host chat.tmint.dev
         paths:
           - path: /
             pathType: Prefix
@@ -17,5 +17,5 @@ elementweb:
           - *host
   config:
     default:
-      base_url: https://matrix.khuedoan.com
-      server_name: khuedoan.com
+      base_url: https://matrix.tmint.dev
+      server_name: tmint.dev
